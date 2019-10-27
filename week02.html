@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>W02 Team Activity</title>
+    <script>
+      function message() {
+        var inputVal = parseFloat(document.getElementById("input1").value);
+
+        if (isNaN(inputVal) == true) {
+          document.getElementById("message").innerHTML = "Not a number";
+        } else {
+          var total = 0;
+          for (var i = 1; i <= inputVal; i++) {
+            total += i;
+          }
+          document.getElementById("message").innerHTML = total;
+        }
+      }
+
+      function total() {
+        var inputVal1 = parseFloat(document.getElementById("input1").value);
+        var inputVal2 = parseFloat(document.getElementById("input2").value);
+        var totalVal = inputVal1 + inputVal2;
+        document.getElementById("message").innerHTML = totalVal;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="number" id="input1" />
+
+    <input type="number" id="input2" />
+
+    <button onclick="total()">+</button>
+
+    <button onclick="message()">Click me</button>
+
+    <div id="message"></div>
+  </body>
+</html>

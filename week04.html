@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>W04 Exercises</title>
+      
+
+      
+    <style>
+      
+        #board {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        
+        #board div {
+            border: 1px solid gray;
+            height: 150px;
+        }
+        
+    </style>
+      
+  </head>
+  <body>
+
+      <div id="board">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+      </div>
+      
+      <button id="reset">RESET</button>
+      
+    <script>
+
+        //const gameBoard = document.getElementsByClassName("cell");
+        
+        let playerTurn = "X";
+        
+        const cells = document.querySelectorAll(".cell");
+        
+
+        
+        cells.forEach(function(cell) {
+            cell.addEventListener("touchend", myFunction);
+            
+            function myFunction() {
+                if (playerTurn == "X") {
+                    cell.innerHTML = "X";
+                    playerTurn = "O";
+                } else {
+                    cell.innerHTML = "O";
+                    playerTurn = "X";
+                }
+                
+                
+            }
+            
+            console.log(cell);
+        });
+        
+        const resetButton = document.getElementById("reset").addEventListener("onclick", );
+        
+        
+        
+    </script>
+      
+  </body>
+</html>
